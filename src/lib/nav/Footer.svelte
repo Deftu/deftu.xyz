@@ -22,9 +22,10 @@
         top: 0;
         width: 100%;
         text-align: center;
-        background-color: var(--text-light);
-        color: var(--background-dark);
+        background-color: var(--text);
+        color: var(--background);
         padding: 5px;
+        z-index: 999999999;
     }
 
     .wrapper {

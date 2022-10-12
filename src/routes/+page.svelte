@@ -2,22 +2,33 @@
 	export const prerender = true;
 </script>
 
-<script lang="ts">
+<script>
 	import Metadata from "$lib/Metadata.svelte";
 	import DevinBadge from "$lib/DevinBadge.svelte";
+  	import Switch from "$lib/Switch.svelte";
+
+	import {
+		toggleTheme,
+		isDarkMode
+	} from "$lib/darkMode";
 </script>
 
 <Metadata title="Deftu" description="Deftu's official website." />
 
+<header>
+	<Switch on:click={toggleTheme} checked={isDarkMode()} />
+	<p>Enable Dark Mode</p>
+</header>
+
 <section class="first-section">
 	<div class="title-wrapper">
-		<h1 class="title">Deftu</h1>
-		<p class="subtitle">Developer, innovator and computer enthusiast.</p>
+		<h1 class="title username">Deftu</h1>
+		<p class="subtitle">Developer, innovator, entrepreneur, gamer and professional idiot.</p>
 	</div>
 	<div class="badges">
 		<div class="donation-badges">
 			<a href="https://ko-fi.com/Deftu"><DevinBadge type="cozy" category="donate" identifier="kofi-singular_64h" /></a>
-			<a href="https://github.com/Deftu"><DevinBadge type="cozy" category="donate" identifier="ghsponsors-singular_64h" /></a>
+			<!-- <a href="https://github.com/Deftu"><DevinBadge type="cozy" category="donate" identifier="ghsponsors-singular_64h" /></a> -->
 			<a href="https://paypal.me/MatthewTGM"><DevinBadge type="cozy" category="donate" identifier="paypal-singular_64h" /></a>
 		</div>
 		<div>
@@ -32,12 +43,6 @@
 		</div>
 	</div>
 </section>
-<section class="second-section">
-	<div>
-		<h1 class="title">Commissions open!</h1>
-		<p class="subtitle">Visit my <a href="https://ko-fi.com/Deftu">Ko-Fi</a> page to commission something!</p>
-	</div>
-</section>
 
 <style>
 	:global(main) {
@@ -45,8 +50,23 @@
 		flex-direction: column;
 	}
 
+	header {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		position: absolute;
+		padding: 10px;
+		top: 0;
+		width: 100%;
+		color: var(--text);
+	}
+
+	header > p {
+		padding-left: 10px;
+	}
+
 	section {
-		color: var(--text-light);
+		color: var(--text);
 		text-align: center;
 		width: 100vw;
 		min-height: 100vh;
@@ -55,6 +75,10 @@
 
 	section:first-of-type {
 		border-top: none;
+	}
+
+	.username {
+		color: var(--primary);
 	}
 
 	.title {
@@ -75,13 +99,6 @@
 
 	.badges {
 		display: flex;
-		flex-direction: column;
-	}
-
-	.second-section {
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		flex-direction: column;
 	}
 </style>

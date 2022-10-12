@@ -23,12 +23,12 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
 	text-decoration: none;
-	color: #990000;
+	color: #C91212;
 	transition: all 0.25s;
 }
 
 a:hover {
 	text-decoration: underline;
-	color: #e90000;
+	color: rgb(233, 27, 0);
 	transition: all 0.25s;
 }

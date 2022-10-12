@@ -26,7 +26,7 @@
     .wrapper {
         min-height: 100%;
         text-align: center;
-        color: white;
+        color: var(--text);
         padding: 0;
         margin: 0;
     }

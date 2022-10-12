@@ -12,10 +12,15 @@
 <Footer />
 
 <style>
-	:global(html, body) {
-		--primary: #990000;
-		--text-light: #DBD7D2;
-		--background-dark: #151316;
+	:global(html) {
+		--primary: #C91212;
+		--text: #151316;
+		--background: #F3F3F0;
+	}
+
+	:global(.dark-mode) {
+		--text: #F3EFE0;
+		--background: #151316;
 	}
 
 	:global(html) {
@@ -28,6 +33,6 @@
 	}
 
 	:global(body) {
-		background-color: var(--background-dark);
+		background-color: var(--background);
 	}
 </style>
