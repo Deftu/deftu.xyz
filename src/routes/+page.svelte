@@ -17,12 +17,19 @@
 
 <header>
 	<Switch on:click={toggleTheme} checked={isDarkMode()} />
-	<p>Enable Dark Mode</p>
+	<p>Dark Mode</p>
 </header>
 
 <section class="first-section">
 	<div class="title-wrapper">
 		<h1 class="title username">Deftu</h1>
+		<p class="subtitle">
+			Owner of <a href="https://unifycraft.xyz/" class="unifycraft brand-name">UnifyCraft</a>.
+			<br>
+			Owner of <a href="https://uniloader.unifycraft.xyz/" class="unifycraft brand-name">UniLoader</a>.
+			<br>
+			Developer at <a href="https://github.com/100MediaFabric" class="brand-name">100Media</a>.
+		</p>
 		<p class="subtitle">Developer, innovator, entrepreneur, gamer and professional idiot.</p>
 	</div>
 	<div class="badges">
@@ -95,6 +102,14 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+	}
+
+	.brand-name {
+		font-weight: bold;
+	}
+
+	.unifycraft {
+		color: #2A628F;
 	}
 
 	.badges {

@@ -24,7 +24,6 @@
 	}
 
 	:global(html) {
-		scroll-behavior: smooth;
 		scrollbar-width: none;
 	}
 
