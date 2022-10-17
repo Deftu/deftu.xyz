@@ -4,10 +4,23 @@
 
 <script lang="ts">
     import Metadata from "$lib/Metadata.svelte";
-    import { page } from "$app/stores";
+    import {
+        page
+    } from "$app/stores";
+
+    import Switch from "$lib/Switch.svelte";
+    import {
+		toggleTheme,
+		isDarkMode
+	} from "$lib/darkMode";
 </script>
 
 <Metadata title={$page.status.toString()} description=${$page.error?.message} />
+
+<header>
+	<Switch on:click={toggleTheme} checked={isDarkMode()} />
+	<p>Dark Mode</p>
+</header>
 
 <div class="wrapper">
     <h1 class="title">{$page.status}</h1>
@@ -22,6 +35,21 @@
         justify-content: center;
         align-items: center;
     }
+
+    header {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		position: absolute;
+		padding: 10px;
+		top: 0;
+		width: 100%;
+		color: var(--text);
+	}
+
+	header > p {
+		padding-left: 10px;
+	}
 
     .wrapper {
         min-height: 100%;
