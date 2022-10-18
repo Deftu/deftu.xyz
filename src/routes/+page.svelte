@@ -29,6 +29,8 @@
 			Owner of <a href="https://uniloader.unifycraft.xyz/" class="unifycraft brand-name">UniLoader</a>.
 			<br>
 			Developer at <a href="https://github.com/100MediaFabric" class="brand-name">100Media</a>.
+			<br>
+			<a href="https://ko-fi.com/Deftu/commissions" class="brand-name">Commisisons are open!</a>
 		</p>
 		<p class="subtitle">Developer, innovator, entrepreneur, gamer and professional idiot.</p>
 	</div>
