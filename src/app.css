@@ -1,20 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Outfit");
-@import url("https://fonts.googleapis.com/css?family=Inter");
+@import url("https://fonts.googleapis.com/css?family=Manrope");
+
+* {
+	box-sizing: border-box;
+	font-family: "Manrope", sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+}
 
 body, html {
+	--primary: #C91212;
+	--primary-variant: #A90F0F;
+	--text: #151316;
+	--background: #F3F3F0;
+	--background-variant: #D2D2C6;
+
 	margin: 0;
 	height: 100%;
 	width: 100%;
 	scroll-behavior: smooth;
+	scrollbar-width: none;
+	background-color: var(--background);
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: "Outfit", sans-serif;
-}
-
-* {
-	box-sizing: border-box;
-	font-family: "Inter", sans-serif;
+html::-webkit-scrollbar {
+	display: none;
 }
 
 .svelte-body {
@@ -22,14 +32,51 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 }
 
+@media (prefers-color-scheme: dark) {
+	body, html {
+		--text: #F3EFE0;
+		--background: #151316;
+		--background-variant: #1F1C21;
+	}
+}
+
+/* Fonts */
+
+h1, h2, h3, h1 > *, h2 > *, h3 > * {
+	font-family: "Outfit", sans-serif;
+	font-weight: 600;
+}
+
+h1, h1 > * {
+	font-size: 50px;
+}
+
+h2, h2 > * {
+	font-size: 40px;
+}
+
+h3, h3 > * {
+	font-size: 30px;
+}
+
+p .button-text {
+	font-family: 'Manrope', sans-serif;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.branding {
+	color: var(--primary);
+}
+
 a {
 	text-decoration: none;
-	color: #C91212;
+	color: var(--primary);
 	transition: all 0.25s;
 }
 
 a:hover {
 	text-decoration: underline;
-	color: rgb(233, 27, 0);
+	color: var(--primary-variant);
 	transition: all 0.25s;
 }

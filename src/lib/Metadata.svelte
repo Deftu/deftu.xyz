@@ -11,4 +11,6 @@
     <meta name="description" content={description} />
 	<meta name="og:description" content={description} />
 	<meta name="twitter:description" content={description} />
+
+	<meta name="theme-color" content="#C91212" />
 </svelte:head>

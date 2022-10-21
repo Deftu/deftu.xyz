@@ -3,35 +3,12 @@
 	import "../app.css";
 
 	// Primary components
+	import Header from "$lib/nav/Header.svelte";
 	import Footer from "$lib/nav/Footer.svelte";
 </script>
 
+<Header />
 <main>
 	<slot />
 </main>
 <Footer />
-
-<style>
-	:global(html) {
-		--primary: #C91212;
-		--text: #151316;
-		--background: #F3F3F0;
-	}
-
-	:global(.dark-mode) {
-		--text: #F3EFE0;
-		--background: #151316;
-	}
-
-	:global(html) {
-		scrollbar-width: none;
-	}
-
-	:global(html::-webkit-scrollbar) {
-		display: none;
-	}
-
-	:global(body) {
-		background-color: var(--background);
-	}
-</style>
