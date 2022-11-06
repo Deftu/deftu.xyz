@@ -4,6 +4,7 @@
 
 <script>
 	import Metadata from "$lib/Metadata.svelte";
+	import Links from "$lib/nav/Links.svelte";
 </script>
 
 <Metadata title="Deftu" description="Deftu's official website, get more info here!" />
@@ -13,11 +14,12 @@
 		<h1 class="title branding">Deftu</h1>
 		<h2 class="description">Passionate, ambitious and bright software developer.</h2>
 		<ul class="titles">
-			<li><h3>Owner @ <a href="https://unifycraft.xyz/" class="unifycraft branding">UnifyCraft</a></h3></li>
-			<li><h3>Owner @ <a href="https://uniloader.unifycraft.xyz/" class="unifycraft branding">UniLoader</a></h3></li>
-			<li><h3>Developer @ <a href="https://github.com/100MediaFabric" class="branding">100Media</a></h3></li>
+			<li><h3>Owner @ <a href="https://enhancedpixel.xyz/" class="enhancedpixel branding">EnhancedPixel</a></h3></li>
+			<li><h3>Owner @ <a href="https://spruceloader.xyz/" class="spruce branding">Spruce Loader</a></h3></li>
+			<li><h3>Developer @ <a href="https://100media.us/" class="branding">100Media</a></h3></li>
 		</ul>
 	</div>
+	<Links />
 </div>
 
 <style>
@@ -44,9 +46,10 @@
 
 	.description {
 		padding: 0;
-		margin: 0;
 		margin-top: 25px;
 		margin-bottom: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
 	}
 
 	.titles {
@@ -62,7 +65,11 @@
 		padding: 0;
 	}
 
-	.unifycraft {
-		color: #2A628F;
+	.enhancedpixel {
+		color: #4E6AD0;
 	}
+
+    .spruce {
+        color: #3F785F;
+    }
 </style>
