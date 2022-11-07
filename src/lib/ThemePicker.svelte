@@ -36,6 +36,7 @@
         color: var(--text);
         background-color: var(--primary);
         width: fit-content;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.65);
     }
 
     input {
