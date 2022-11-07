@@ -5,24 +5,24 @@
     export let wip: boolean = false;
 </script>
 
-<div class="card">
-    <div class="card-header">
+<div class="project-card">
+    <div class="project-card-header">
         {#if url}
-        <a href={url}><h2 class="card-title">{name}</h2></a>
+        <a href={url}><h2 class="project-card-title">{name}</h2></a>
         {:else}
-        <h2 class="card-title">{name}</h2>
+        <h2 class="project-card-title">{name}</h2>
         {/if}
         {#if wip}
         <span class="wip">WIP</span>
         {/if}
     </div>
-    <div class="card-content">
-        <p class="card-description">{description}</p>
+    <div class="project-card-content">
+        <p class="project-card-description">{description}</p>
     </div>
 </div>
 
 <style>
-    .card {
+    .project-card {
         background-color: var(--background-variant);
         color: var(--text);
         border-radius: 15px;
@@ -39,13 +39,13 @@
     }
 
     @media (max-width: 525px) {
-        .card {
+        .project-card {
             min-width: 350px;
             max-width: 350px;
         }
     }
 
-    .card-header {
+    .project-card-header {
         display: flex;
         width: 100%;
         padding: 0;
@@ -59,11 +59,11 @@
         font-size: 20px;
     }
 
-    .card-content {
+    .project-card-content {
         padding: 15px;
     }
 
-    .card-title, .card-description {
+    .project-card-title, .project-card-description {
         margin: 0;
         padding: 0;
     }
