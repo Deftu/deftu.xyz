@@ -38,7 +38,7 @@
         text-align: center;
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 525px) {
         .card {
             min-width: 350px;
             max-width: 350px;
