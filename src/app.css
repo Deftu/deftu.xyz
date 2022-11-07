@@ -8,7 +8,7 @@
 	font-weight: normal;
 }
 
-:root {
+html {
     --primary: #C91212;
 	--primary-variant: #A90F0F;
 	--text: #151316;
@@ -16,13 +16,25 @@
 	--background-variant: #D2D2C6;
 }
 
-:root:has(#option-light:checked) {
+.theme-light {
     --text: #151316;
     --background: #F3F3F0;
     --background-variant: #D2D2C6;
 }
 
-:root:has(#option-dark:checked) {
+.theme-dark {
+    --text: #F3EFE0;
+    --background: #151316;
+    --background-variant: #1F1C21;
+}
+
+html:has(#option-light:checked) {
+    --text: #151316;
+    --background: #F3F3F0;
+    --background-variant: #D2D2C6;
+}
+
+html:has(#option-dark:checked) {
     --text: #F3EFE0;
     --background: #151316;
     --background-variant: #1F1C21;
