@@ -33,6 +33,7 @@
         border: none;
         border-radius: 0 0 15px 0;
         gap: 15px;
+        padding-top: 10px;
         color: var(--text);
         background-color: var(--primary);
         width: fit-content;
