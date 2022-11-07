@@ -75,6 +75,7 @@
 
     .projects {
         flex-direction: column;
+        margin: 0 0 30px 0;
     }
 
 	.title {
