@@ -6,7 +6,7 @@
 
 <style>
     footer {
-        position: absolute;
+        position: relative;
         bottom: 0;
         width: 100%;
         text-align: center;
@@ -14,5 +14,6 @@
         color: var(--text);
         padding: 5px;
         z-index: 999999999;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
     }
 </style>
