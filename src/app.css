@@ -8,13 +8,39 @@
 	font-weight: normal;
 }
 
-body, html {
-	--primary: #C91212;
+html {
+    --primary: #C91212;
 	--primary-variant: #A90F0F;
 	--text: #151316;
 	--background: #F3F3F0;
 	--background-variant: #D2D2C6;
+}
 
+.theme-light {
+    --text: #151316;
+    --background: #F3F3F0;
+    --background-variant: #D2D2C6;
+}
+
+.theme-dark {
+    --text: #F3EFE0;
+    --background: #151316;
+    --background-variant: #1F1C21;
+}
+
+html:has(#option-light:checked) {
+    --text: #151316;
+    --background: #F3F3F0;
+    --background-variant: #D2D2C6;
+}
+
+html:has(#option-dark:checked) {
+    --text: #F3EFE0;
+    --background: #151316;
+    --background-variant: #1F1C21;
+}
+
+body, html, .svelte-body {
 	margin: 0;
 	height: 100%;
 	width: 100%;
@@ -25,19 +51,6 @@ body, html {
 
 html::-webkit-scrollbar {
 	display: none;
-}
-
-.svelte-body {
-	height: 100%;
-	width: 100%;
-}
-
-@media (prefers-color-scheme: dark) {
-	body, html {
-		--text: #F3EFE0;
-		--background: #151316;
-		--background-variant: #1F1C21;
-	}
 }
 
 /* Fonts */
