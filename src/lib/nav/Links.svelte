@@ -1,5 +1,6 @@
 <div class="links">
   <ul>
+    <li><a rel="me" href="https://craftodon.social/@deftu">Mastodon</a></li>
     <li><a href="https://shr.deftu.xyz/youtube">YouTube</a></li>
     <li><a href="https://shr.deftu.xyz/github">GitHub</a></li>
     <li><a href="https://shr.deftu.xyz/twitter">Twitter</a></li>
