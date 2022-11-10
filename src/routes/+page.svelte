@@ -15,6 +15,7 @@
 		<div class="title-wrapper">
 			<h1 class="title branding">Deftu</h1>
 			<h2 class="description">Passionate, ambitious and bright software developer.</h2>
+            <h3 class="more-content">Click <a href="/about">here</a> if you'd like to learn more.</h3>
 			<ul class="titles">
 				<li><h3>Owner @ <a href="https://enhancedpixel.xyz/" class="enhancedpixel branding">EnhancedPixel</a></h3></li>
 				<li><h3>Owner @ <a href="https://spruceloader.xyz/" class="spruce branding">Spruce Loader</a></h3></li>
@@ -78,19 +79,28 @@
         margin: 0 0 30px 0;
     }
 
+    .title-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
 	.title {
 		margin: 0;
 		padding: 0;
 	}
 
 	.description {
+        max-width: 75%;
 		padding: 0;
-		margin-top: 25px;
-		margin-bottom: 30px;
-        margin-left: 15px;
-        margin-right: 15px;
-        margin: 25px 15px 30px 15px;
+        margin: 25px 15px 10px 15px;
 	}
+
+    .more-content {
+        padding: 0;
+        margin: 5px 15px 30px 15px;
+    }
 
 	.titles {
 		list-style: none;
@@ -114,13 +124,5 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-    }
-
-	.enhancedpixel {
-		color: #4E6AD0;
-	}
-
-    .spruce {
-        color: #3F785F;
     }
 </style>
