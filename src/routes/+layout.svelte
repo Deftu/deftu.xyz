@@ -1,14 +1,23 @@
-<script lang="ts">
-	// Styling
-	import "../app.css";
-
-	// Primary components
-    import ThemePicker from "$lib/ThemePicker.svelte";
-	import Footer from "$lib/nav/Footer.svelte";
+<script context="module" lang="ts">
+	export const prerender = true;
 </script>
 
-<ThemePicker />
+<script lang="ts">
+	import "../app.css";
+    import {
+        NavBar,
+        Footer
+    } from "$lib/nav";
+</script>
+
+<NavBar />
 <main>
 	<slot />
 </main>
 <Footer />
+
+<style>
+    main {
+        flex: 1;
+    }
+</style>

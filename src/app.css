@@ -1,43 +1,54 @@
 @import url("https://fonts.googleapis.com/css?family=Outfit");
 @import url("https://fonts.googleapis.com/css?family=Manrope");
 
-* {
+html {
+    --primary: #C91212;
+	--primary-variant: #A90F0F;
+
+	--text: #28282B;
+    --text-faded: #28282BD9;
+    --text-disabled: #33333340;
+
+	--background-1: #DBD7D2;
+	--background-2: #FDFBF9;
+    --background-3: #F5EBE0;
+    --background-4: #D2CDC6;
+}
+
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 	font-family: "Manrope", sans-serif;
 	font-size: 20px;
 	font-weight: normal;
-}
-
-html {
-    --primary: #C91212;
-	--primary-variant: #A90F0F;
-	--text: #151316;
-	--background: #F3F3F0;
-	--background-variant: #D2D2C6;
-}
-
-.theme-light {
-    --text: #151316;
-    --background: #F3F3F0;
-    --background-variant: #D2D2C6;
+    margin: 0;
+    padding: 0;
+    color: var(--text);
 }
 
 .theme-dark {
-    --text: #F3EFE0;
-    --background: #151316;
-    --background-variant: #1F1C21;
+    --text: #FDFBF9;
+    --text-faded: #D2CDC6D9;
+    --text-disabled: #D2CDC640;
+
+    --background-1: #28282B;
+    --background-2: #151316;
+    --background-3: #1D1D20;
+    --background-4: #131316;
 }
 
-html:has(#option-light:checked) {
-    --text: #151316;
-    --background: #F3F3F0;
-    --background-variant: #D2D2C6;
-}
+@media (prefers-color-scheme: dark) {
+    html {
+        --text: #FDFBF9;
+        --text-faded: #D2CDC6D9;
+        --text-disabled: #D2CDC640;
 
-html:has(#option-dark:checked) {
-    --text: #F3EFE0;
-    --background: #151316;
-    --background-variant: #1F1C21;
+        --background-1: #28282B;
+        --background-2: #151316;
+        --background-3: #1D1D20;
+        --background-4: #131316;
+    }
 }
 
 body, html, .svelte-body {
@@ -46,7 +57,9 @@ body, html, .svelte-body {
 	width: 100%;
 	scroll-behavior: smooth;
 	scrollbar-width: none;
-	background-color: var(--background);
+	background-color: var(--background-1);
+    display: flex;
+    flex-direction: column;
 }
 
 html::-webkit-scrollbar {
@@ -55,25 +68,33 @@ html::-webkit-scrollbar {
 
 /* Fonts */
 
-h1, h2, h3, h1 > *, h2 > *, h3 > * {
+h1,
+h1 > *,
+h2,
+h2 > *,
+h3,
+h3 > * {
 	font-family: "Outfit", sans-serif;
 	font-weight: 600;
 }
 
-h1, h1 > * {
+h1,
+h1 > * {
 	font-size: 50px;
 }
 
-h2, h2 > * {
+h2,
+h2 > * {
 	font-size: 40px;
 }
 
-h3, h3 > * {
+h3,
+h3 > * {
 	font-size: 30px;
 }
 
 p .button-text {
-	font-family: 'Manrope', sans-serif;
+	font-family: "Manrope", sans-serif;
 	font-size: 25px;
 	font-weight: 600;
 }

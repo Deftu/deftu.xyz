@@ -18,13 +18,6 @@
 </div>
 
 <style>
-    :global(main) {
-        min-height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
     .wrapper {
         min-height: 100%;
         text-align: center;

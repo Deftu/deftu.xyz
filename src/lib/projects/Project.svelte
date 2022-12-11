@@ -23,7 +23,7 @@
 
 <style>
     .project-card {
-        background-color: var(--background-variant);
+        background-color: var(--background-2);
         color: var(--text);
         border-radius: 15px;
         margin: 10px;
