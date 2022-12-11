@@ -114,3 +114,13 @@ a:hover {
 	color: var(--primary-variant);
 	transition: all 0.25s;
 }
+
+/* Brand colours */
+
+.enhancedpixel {
+    color: #4E6AD0;
+}
+
+.spruce {
+    color: #3F785F;
+}
