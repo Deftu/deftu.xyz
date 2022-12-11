@@ -1,6 +1,6 @@
 {
-	"name": "main",
-	"version": "0.0.1",
+	"name": "website",
+	"version": "1.0.0",
 	"scripts": {
 		"dev": "vite dev --host",
 		"build": "vite build",
@@ -23,10 +23,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/fira-mono": "^4.5.0",
 		"@sveltejs/adapter-node": "^1.0.0-next.98",
-		"cookie": "^0.4.2",
-		"front-matter": "^4.0.2",
-		"glob": "^8.0.3"
+		"cookie": "^0.4.2"
 	}
 }

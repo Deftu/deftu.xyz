@@ -1,6 +1,6 @@
 <div align="center">
 
-# [`deftu.xyz`]
+# deftu.xyz
 Deftu's personal website.
 
 </div>

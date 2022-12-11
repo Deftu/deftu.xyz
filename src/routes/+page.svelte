@@ -1,128 +1,123 @@
-<script context="module" lang="ts">
-	export const prerender = true;
-</script>
-
 <script>
 	import Metadata from "$lib/Metadata.svelte";
-	import Links from "$lib/nav/Links.svelte";
-    import Project from "$lib/projects/Project.svelte";
 </script>
 
-<Metadata title="Deftu" description="Deftu's official website, get more info here!" />
+<Metadata title="Deftu" description="Deftu's official info center! Find out more about Deftu and his projects." />
 
-<section>
-	<div class="content">
-		<div class="title-wrapper">
-			<h1 class="title branding">Deftu</h1>
-			<h2 class="description">Passionate, ambitious and bright software developer.</h2>
-            <h3 class="more-content">Click <a href="/about">here</a> if you'd like to learn more.</h3>
-			<ul class="titles">
-				<li><h3>Owner @ <a href="https://enhancedpixel.xyz/" class="enhancedpixel branding">EnhancedPixel</a></h3></li>
-				<li><h3>Owner @ <a href="https://spruceloader.xyz/" class="spruce branding">Spruce Loader</a></h3></li>
-				<li><h3>Developer @ <a href="https://100media.us/" class="branding">100Media</a></h3></li>
-			</ul>
-		</div>
-		<Links />
-	</div>
-</section>
-<section>
-    <div class="projects">
-        <h1 class="title section-title">Projects</h1>
-        <ul class="project-list">
-            <li><Project name="CrashBrander" url="https://modrinth.com/mod/crashbrander" description="Small mod which adds your (modpack) branding to crash reports, useful for debugging!" /></li>
-            <li><Project name="Screencapper" url="https://modrinth.com/mod/screencapper" description="A highly advanced screenshot improvement mod." /></li>
-            <li><Project name="Noteable" url="https://modrinth.com/mod/noteable" description="Adds (sticky) notes to the game! " /></li>
-            <li><Project name="DeftuLib" url="https://modrinth.com/mod/deftulib" description="Small library for Deftu's mods. " /></li>
-            <li><Project name="Deftu's Download Counter" url="https://github.com/Deftu/DeftuDownloadCounter" description="A self-hostable Discord bot which tracks download milestones." /></li>
-            <li><Project name="QuickSocket" url="https://github.com/Deftu/QuickSocket" description="Library used for handling websocket connections in Kotlin and Java." /></li>
-            <li><Project name="FileDownloader" url="https://github.com/Deftu/FileDownloader" description="Simple library used to handle file downloads in the JVM." /></li>
-            <li><Project name="CraftProcessor" url="https://github.com/Deftu/CraftProcessor" description="A Discord bot which scans Minecraft logs and crash reports to find potential solutions." wip /></li>
-            <li><Project name="Deftils" url="https://github.com/Deftu/Deftils" description="JVM core library adding a multitude of small utilities regarding collections and data manipulation." /></li>
-            <li><Project name="OofMod" url="https://modrinth.com/mod/oofmod" description="A PvP mod for 1.8.9 which plays a sound upon an action." /></li>
-        </ul>
+<section class="branding">
+    <div class="content">
+        <img class="logo" src="/branding/logo.png" alt="Logo" />
+        <div class="brand-info">
+            <h1 class="title">Deftu</h1>
+            <h2 class="subtitle"><span>Developer</span>, <span>Designer</span>, <span>Creator</span></h2>
+            <p class="description">
+                Creating your favourite technology elegantly and efficiently, with a touch of style. - Also building a safer and more secure internet for everyone. <br>
+                <a href="/about">Learn more about me...</a>
+            </p>
+        </div>
     </div>
 </section>
 
 <style>
-	:global(main) {
-		display: flex;
-		flex-direction: column;
-	}
+    :global(main) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
-	section {
-		width: 100%;
-		min-height: 100vh;
-	}
-
-    .section-title {
-        width: 100%;
+    .branding {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        width: 100%;
+        padding: 0 40px;
+        max-width: 1050px;
+    }
+
+    .logo {
+        width: 256px;
+        height: 256px;
+        object-fit: cover;
+        background-color: var(--background-4);
+        border-radius: 15px;
+    }
+
+    .brand-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .title {
+        font-size: 55px;
+        font-weight: 800;
         color: var(--text);
     }
 
-	.content, .projects {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		color: var(--text);
-		text-align: center;
-
-		width: 100%;
-		min-height: 100vh;
-	}
-
-    .projects {
-        flex-direction: column;
-        margin: 0 0 30px 0;
+    .subtitle,
+    .subtitle > * {
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--text-faded);
     }
 
-    .title-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .description {
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--text);
     }
 
-	.title {
-		margin: 0;
-		padding: 0;
-	}
-
-	.description {
-        max-width: 75%;
-		padding: 0;
-        margin: 25px 15px 10px 15px;
-	}
-
-    .more-content {
-        padding: 0;
-        margin: 5px 15px 30px 15px;
+    .description a {
+        color: var(--text-disabled);
+        text-decoration: none;
+        transition: color 0.15s ease-out;
     }
 
-	.titles {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		display: flex;
-		flex-direction: column;
-	}
+    .description a:hover {
+        color: var(--text);
+        transition: color 0.15s ease-out;
+    }
 
-	.titles > li > h3 {
-		margin: 0;
-		padding: 0;
-	}
+    @media (max-width: 768px) {
+        .content {
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 20px;
+        }
 
-    .project-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        .logo {
+            width: 175px;
+            height: 175px;
+        }
+
+        .brand-info {
+            align-items: center;
+        }
+
+        .title {
+            font-size: 45px;
+        }
+
+        .subtitle,
+        .subtitle > * {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .description {
+            font-size: 20px;
+            text-align: center;
+        }
     }
 </style>
