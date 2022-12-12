@@ -8,11 +8,22 @@
     <div class="content">
         <img class="logo" src="/branding/logo.png" alt="Logo" />
         <div class="brand-info">
-            <h1 class="title">Deftu</h1>
-            <h2 class="subtitle"><span>Developer</span>, <span>Designer</span>, <span>Creator</span></h2>
-            <p class="description">
-                Creating your favourite technology elegantly and efficiently, with a touch of style. - Also building a safer and more secure internet for everyone. <br>
-                <a href="/about">Learn more about me...</a>
+            <div class="brand">
+                <h1 class="title">Deftu</h1>
+                <h2 class="subtitle"><span>Developer</span>, <span>Designer</span>, <span>Creator</span></h2>
+                <p class="description">
+                    Creating your favourite technology elegantly and efficiently, with a touch of style. - Also building a safer and more secure internet for everyone. <br>
+                    <a href="/about">Learn more about me...</a>
+                </p>
+            </div>
+
+            <p class="miscellaneous">
+                Looking for other links? <br>
+                <a href="https://docs.deftu.xyz/" target="_blank" rel="noopener noreferrer">Documentation</a> |
+                <a href="https://github.com/Deftu" target="_blank" rel="noopener noreferrer">GitHub</a> |
+                <a href="https://twitter.com/DeftuDev" target="_blank" rel="noopener noreferrer">Twitter</a> |
+                <a href="https://shr.deftu.xyz/discord" target="_blank" rel="noopener noreferrer">Discord</a> |
+                <a href="https://ko-fi.com/Deftu" target="_blank" rel="noopener noreferrer">Ko-Fi</a>
             </p>
         </div>
     </div>
@@ -51,12 +62,22 @@
         border-radius: 15px;
     }
 
-    .brand-info {
+    .brand-info, .brand {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         gap: 10px;
+    }
+
+    .brand-info {
+        gap: 25px;
+    }
+
+    .miscellaneous {
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--text);
     }
 
     .title {
@@ -79,7 +100,7 @@
     }
 
     .description a {
-        color: var(--text-disabled);
+        color: var(--text-faded);
         text-decoration: none;
         transition: color 0.15s ease-out;
     }
@@ -101,8 +122,12 @@
             height: 175px;
         }
 
-        .brand-info {
+        .brand-info, .brand {
             align-items: center;
+        }
+
+        .brand-info {
+            gap: 15px;
         }
 
         .title {
@@ -117,6 +142,10 @@
 
         .description {
             font-size: 20px;
+            text-align: center;
+        }
+
+        .miscellaneous {
             text-align: center;
         }
     }

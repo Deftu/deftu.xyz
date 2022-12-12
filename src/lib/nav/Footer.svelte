@@ -10,7 +10,7 @@
         bottom: 0;
         width: 100%;
         text-align: center;
-        background-color: var(--background-variant);
+        background-color: var(--background-2);
         color: var(--text);
         padding: 5px;
         z-index: 999999999;
