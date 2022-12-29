@@ -1,7 +1,7 @@
 <footer>
     <span>&copy; <a href="/">Deftu</a> 2022</span>
     -
-    <span>View code <a href="https://github.com/Deftu/deftu.xyz">here</a>.</span>
+    <span>View code <a href="https://github.com/Deftu/deftu.xyz" aria-label="Link to the website's GitHub repository">on GitHub</a>.</span>
 </footer>
 
 <style>
